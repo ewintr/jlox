@@ -1,4 +1,6 @@
 
+.PHONY: build
+
 build:
 	javac -d build/classes src/com/craftinginterpreters/lox/*
 
