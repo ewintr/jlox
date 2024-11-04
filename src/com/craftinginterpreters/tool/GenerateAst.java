@@ -26,7 +26,7 @@ public class GenerateAst {
 
         writer.println("package com.craftinginterpreters.lox;");
         writer.println();
-        writer.println("import java.util.list;");
+        writer.println("import java.util.List;");
         writer.println();
         writer.println("abstract class " + baseName + " {");
 
@@ -65,7 +65,7 @@ public class GenerateAst {
         writer.println("    " + className + "(" + fieldList + ") {");
 
         // Store parameters in fields
-        String []fields = fieldList.split(",");
+        String []fields = fieldList.split(", ");
         for (String field : fields) {
             String name = field.split(" ")[1];
             writer.println("    this." + name + " = " + name + ";" );
@@ -83,7 +83,7 @@ public class GenerateAst {
         // Fields
         writer.println();
         for (String field : fields) {
-            writer.println("    final " + field + " = " + field + ";");
+            writer.println("    final " + field + ";");
         }
 
         writer.println("  }");
